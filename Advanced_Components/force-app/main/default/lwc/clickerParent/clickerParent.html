@@ -1,0 +1,15 @@
+<template>
+    <section title="Child passes click event to parent to display">
+        <div class="slds-m-around_medium">
+            <p id="target">The button was been clicked {value} time{plural}</p>
+        </div>
+      <p class="slds-p-horizontal_small">
+        <c-clicker-child
+          ondecrement={handleDecrement}
+          onincrement={handleIncrement}
+          onreset={handleReset}
+          value={value}
+        ></c-clicker-child>
+      </p>
+    </section>
+</template>

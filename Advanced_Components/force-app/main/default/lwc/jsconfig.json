@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/dataTable": [
+                "dataTable/dataTable.js"
+            ],
+            "c/helloWorld": [
+                "helloWorld/helloWorld.js"
+            ],
+            "c/clickerChild": [
+                "clickerChild/clickerChild.js"
+            ],
+            "c/clickerParent": [
+                "clickerParent/clickerParent.js"
+            ],
+            "c/errorPanel": [
+                "errorPanel/errorPanel.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}
