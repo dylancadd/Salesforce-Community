@@ -1,12 +1,18 @@
 <template>
     <lightning-card>
         <div class="slds-m-vertical_medium slds-m-around_medium">
-            <h1 class="slds-text-heading_small">Phone Number</h1>
+            <h1 class="slds-text-heading_small">Phone Number: ({areaCode}) {first}-{last}</h1>
             <p class="slds-text-body_regular">Example 1</p>
         </div>  
         <div class="slds-m-vertical_medium slds-m-around_medium">
-            <lightning-slider max="9999999999" value={val} onchange={changeHandler}></lightning-slider>
-            <p>Phone Number: {val}</p>
+            <label>Area Code</label>
+            <lightning-slider min="100" max="999" value={areaCode} onchange={changeAreaCode}></lightning-slider>
+
+            <label>First 3 Digits</label>
+            <lightning-slider min="100" max="999" value={first} onchange={changeFirst}></lightning-slider>
+
+            <label>Last 4 Digits</label>
+            <lightning-slider min="1000" max="9999" value={last} onchange={changeLast}></lightning-slider>
         </div>   
     </lightning-card>
 </template>
