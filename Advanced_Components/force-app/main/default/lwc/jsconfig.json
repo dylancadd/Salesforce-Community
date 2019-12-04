@@ -23,6 +23,9 @@
             ],
             "c/phoneNumber1": [
                 "phoneNumber1/phoneNumber1.js"
+            ],
+            "c/phoneNumber2": [
+                "phoneNumber2/phoneNumber2.js"
             ]
         }
     },
