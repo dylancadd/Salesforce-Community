@@ -17,6 +17,12 @@
             ],
             "c/helloWorld": [
                 "helloWorld/helloWorld.js"
+            ],
+            "c/slider": [
+                "slider/slider.js"
+            ],
+            "c/phoneNumber1": [
+                "phoneNumber1/phoneNumber1.js"
             ]
         }
     },

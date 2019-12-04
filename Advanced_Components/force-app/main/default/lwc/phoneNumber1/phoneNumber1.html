@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-vertical_medium slds-m-around_medium">
+            <h1 class="slds-text-heading_small">Phone Number</h1>
+            <p class="slds-text-body_regular">Example 1</p>
+        </div>  
+        <div class="slds-m-vertical_medium slds-m-around_medium">
+            <lightning-slider max="9999999999" value={val} onchange={changeHandler}></lightning-slider>
+            <p>Phone Number: {val}</p>
+        </div>   
+    </lightning-card>
+</template>
