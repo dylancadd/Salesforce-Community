@@ -4,11 +4,6 @@ export default class ClickerParent extends LightningElement {
     @track value = 0;
     @track plural = "s";
   
-    handleDecrement() {
-      this.value -= 1;
-      this.handlePlural();
-    }
-  
     handleIncrement() {
       this.value += 1;
       this.handlePlural();

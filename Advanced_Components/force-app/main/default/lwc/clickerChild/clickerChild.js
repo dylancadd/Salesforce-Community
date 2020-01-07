@@ -7,10 +7,6 @@ export default class ClickerChild extends LightningElement {
       return this.value.toString();
     }
   
-    handleDecrementClick() {
-      this.dispatchEvent(new CustomEvent('decrement'));
-    }
-  
     handleIncrementClick() {
       this.dispatchEvent(new CustomEvent('increment'));
     }
