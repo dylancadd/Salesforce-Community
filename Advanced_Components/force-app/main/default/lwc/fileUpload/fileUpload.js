@@ -13,6 +13,6 @@ export default class FileUpload extends LightningElement {
 
         const uploadedFiles = event.detail.files;
         this.uploadedFile = uploadedFiles[0].name;
-
+        
     }
 }
