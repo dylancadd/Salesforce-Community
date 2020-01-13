@@ -1,14 +1,14 @@
 <template>
-    <lightning-file-upload
+    <lightning-file-upload class="slds-m-around_medium"
         label="File Upload"
         name="fileUploader"
         accept={acceptedFormats}
-        record-id=0011U00000FAOKO
+        record-id=0011U000011dJ0sQAE
         onuploadfinished={handleUploadFinished}
         multiple>
     </lightning-file-upload>
 
     <div class="slds-m-around_medium">
-        <p>File: {uploadedFile}</p>
+        <p>Accepted File Types: png, jpg, pdf</p>
     </div>
 </template>
