@@ -26,6 +26,9 @@
             ],
             "c/slider": [
                 "slider/slider.js"
+            ],
+            "c/fileUpload": [
+                "fileUpload/fileUpload.js"
             ]
         }
     },
