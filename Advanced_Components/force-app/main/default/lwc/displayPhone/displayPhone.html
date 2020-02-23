@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Phone for Name" icon-name="standard:contact">
+        <template if:true={contact.data}>
+            <div class="slds-m-around_medium">
+                <p><lightning-formatted-phone value={phone}></lightning-formatted-phone></p>
+            </div>
+        </template>
+        <template if:true={contact.error}>
+            <c-error-panel errors={contact.error}></c-error-panel>
+        </template>
+    </lightning-card>
+</template>

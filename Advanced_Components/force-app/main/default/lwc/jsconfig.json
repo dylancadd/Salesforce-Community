@@ -15,6 +15,9 @@
             "c/errorPanel": [
                 "errorPanel/errorPanel.js"
             ],
+            "c/fileUpload": [
+                "fileUpload/fileUpload.js"
+            ],
             "c/helloWorld": [
                 "helloWorld/helloWorld.js"
             ],
@@ -27,8 +30,11 @@
             "c/slider": [
                 "slider/slider.js"
             ],
-            "c/fileUpload": [
-                "fileUpload/fileUpload.js"
+            "c/showRecord": [
+                "showRecord/showRecord.js"
+            ],
+            "c/displayPhone": [
+                "displayPhone/displayPhone.js"
             ]
         }
     },
