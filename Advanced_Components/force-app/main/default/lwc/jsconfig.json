@@ -35,6 +35,9 @@
             ],
             "c/displayPhone": [
                 "displayPhone/displayPhone.js"
+            ],
+            "c/hideShow": [
+                "hideShow/hideShow.js"
             ]
         }
     },
