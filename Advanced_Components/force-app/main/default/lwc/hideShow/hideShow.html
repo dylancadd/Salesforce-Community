@@ -1,17 +1,11 @@
 <template>
-
-    <lightning-input 
-        id="inputField" 
-        label="Show/Hide Password"
-        type="password">
-    </lightning-input>
-
-    <br>
-
-    <lightning-button
-        variant="brand"
-        label={button}
-        onclick={handleClick}>
-    </lightning-button>
-
+    <div class="slds-form-element slds-size_1-of-4">
+        <label class="slds-form-element__label" for="inputField">Show/Hide Password</label>
+        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+            <input type="password" id="inputField" placeholder="Enter Password" class="slds-input"/>
+            <button class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default  slds-button slds-button_icon" onclick={handleClick}>
+                <lightning-button-icon variant="bare" icon-name="utility:preview"></lightning-button-icon>
+            </button> 
+        </div>
+    </div>
 </template>

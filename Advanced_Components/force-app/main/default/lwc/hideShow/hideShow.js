@@ -1,26 +1,16 @@
 /* eslint-disable no-console */
-import { LightningElement, track } from 'lwc';
+import { LightningElement } from 'lwc';
 
 export default class HideShow extends LightningElement {
-    @track button = 'Show';  
-  
+
     handleClick(event) {  
-        const label = event.target.label;
 
-        const input = this.template.querySelector("lightning-input")
-  
-        if ( label === 'Show' ) {  
-            this.button = 'Hide';
-            input.type = 'text';
+        const input = this.template.querySelector("input")
 
-        } else if ( label === 'Hide' ) {  
-            this.button = 'Show';  
-            input.type = 'password' 
-        }  
-
-    } 
-
-        
-    
-
+        if (input.type === 'password') {
+            input.type = 'text'
+        } else if (input.type === 'text') {
+            input.type = 'password'
+        }
+    }
 }
