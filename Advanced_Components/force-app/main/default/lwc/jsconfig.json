@@ -38,6 +38,9 @@
             ],
             "c/hideShow": [
                 "hideShow/hideShow.js"
+            ],
+            "c/buttonStateful": [
+                "buttonStateful/buttonStateful.js"
             ]
         }
     },

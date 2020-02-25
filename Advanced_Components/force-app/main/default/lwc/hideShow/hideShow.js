@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { LightningElement } from 'lwc';
 
 export default class HideShow extends LightningElement {
