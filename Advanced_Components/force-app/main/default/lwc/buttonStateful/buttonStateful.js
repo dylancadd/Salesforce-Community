@@ -6,12 +6,12 @@ export default class ButtonStateful extends LightningElement {
         
         const button = this.template.querySelector("button")
 
-        if (button.className === "slds-button slds-button--neutral slds-not-selected") {
-            button.className = "slds-button slds-button--neutral slds-is-selected-clicked"
-            console.log("Selected")
+        if (button.classList.contains('slds-not-selected')) {
+            button.classList.remove('slds-not-selected')
+            button.classList.add("slds-is-selected-clicked")
         } else {
-            button.className = "slds-button slds-button--neutral slds-not-selected"
-            console.log("Not selected")
+            button.classList.remove('slds-is-selected-clicked')
+            button.classList.add("slds-not-selected")
         }
 
     }

@@ -3,6 +3,15 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/bearLocation": [
+                "bearLocation/bearLocation.js"
+            ],
+            "c/bearSupervisor": [
+                "bearSupervisor/bearSupervisor.js"
+            ],
+            "c/buttonStateful": [
+                "buttonStateful/buttonStateful.js"
+            ],
             "c/clickerChild": [
                 "clickerChild/clickerChild.js"
             ],
@@ -11,6 +20,9 @@
             ],
             "c/dataTable": [
                 "dataTable/dataTable.js"
+            ],
+            "c/displayPhone": [
+                "displayPhone/displayPhone.js"
             ],
             "c/errorPanel": [
                 "errorPanel/errorPanel.js"
@@ -21,26 +33,20 @@
             "c/helloWorld": [
                 "helloWorld/helloWorld.js"
             ],
+            "c/hideShow": [
+                "hideShow/hideShow.js"
+            ],
             "c/phoneNumber1": [
                 "phoneNumber1/phoneNumber1.js"
             ],
             "c/phoneNumber2": [
                 "phoneNumber2/phoneNumber2.js"
             ],
-            "c/slider": [
-                "slider/slider.js"
-            ],
             "c/showRecord": [
                 "showRecord/showRecord.js"
             ],
-            "c/displayPhone": [
-                "displayPhone/displayPhone.js"
-            ],
-            "c/hideShow": [
-                "hideShow/hideShow.js"
-            ],
-            "c/buttonStateful": [
-                "buttonStateful/buttonStateful.js"
+            "c/slider": [
+                "slider/slider.js"
             ]
         }
     },
