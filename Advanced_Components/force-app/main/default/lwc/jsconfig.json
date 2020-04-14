@@ -50,6 +50,9 @@
             ],
             "c/dataTableCulvers": [
                 "dataTableCulvers/dataTableCulvers.js"
+            ],
+            "c/createRecord": [
+                "createRecord/createRecord.js"
             ]
         }
     },
