@@ -47,6 +47,9 @@
             ],
             "c/slider": [
                 "slider/slider.js"
+            ],
+            "c/dataTableCulvers": [
+                "dataTableCulvers/dataTableCulvers.js"
             ]
         }
     },

@@ -1,5 +1,16 @@
 public with sharing class ContactController { 
 
+
+    @AuraEnabled(cacheable=true)
+    public static List<Contact> getContactListCulvers() {
+        return [
+            SELECT Id, FirstName, LastName, Phone, Email, AccountId, Account.Name FROM Contact WHERE Account.Name LIKE : 'Culvers - Newville'
+        ];
+    }
+
+
+
+
     @AuraEnabled(cacheable=true)
     public static List<Contact> editContact(String searchKey) {
         return [SELECT Id, Name FROM Contact WHERE Id = :searchKey];
@@ -14,7 +25,6 @@ public with sharing class ContactController {
 
         String key = '%' + accountName + '%';
         return [SELECT Id, firstName, lastName, Phone, Email, AccountId, Account.Name FROM Contact WHERE Account.Name LIKE : key ORDER BY Name];
-        // return [SELECT Account.Id, Account.Name, Account.AccountNumber, (SELECT firstName, Contact.lastName, Contact.Phone, Contact.Email, Contact.AccountId FROM Contact WHERE Account.Name LIKE : key) FROM Account ORDER BY Name];
     }
 
     @AuraEnabled(cacheable=true)
