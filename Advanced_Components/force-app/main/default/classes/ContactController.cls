@@ -35,7 +35,8 @@ public with sharing class ContactController {
                             From Contact
                             WHERE (lastName LIKE : key)
                             OR (firstName LIKE : key)
-                            OR (name LIKE : key)]){
+                            OR (name LIKE : key)
+                            ORDER BY Name]){
            contact.add(current);
         }
 		
