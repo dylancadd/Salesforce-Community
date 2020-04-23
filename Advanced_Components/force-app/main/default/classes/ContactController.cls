@@ -1,15 +1,58 @@
 public with sharing class ContactController { 
 
 
+    @AuraEnabled
+    public static void deleteCulverContact(string searchKey) {
+        List<Contact> contact = [SELECT Id FROM Contact WHERE Email LIKE : searchKey];
+
+        delete contact;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @AuraEnabled(cacheable=true)
+    public static List<Contact> searchCulverContact(string searchKey) {
+        string key = '%' + searchKey + '%';
+		
+       // create contact list to store search result 
+        List<Contact> contact = new List<Contact>();
+     
+	   // query contact records
+        for(Contact current : [Select id, Name, FirstName, LastName, Phone, Email
+                            From Contact
+                            WHERE (lastName LIKE : key)
+                            OR (firstName LIKE : key)
+                            OR (name LIKE : key)]){
+           contact.add(current);
+        }
+		
+       //If there are no records found with searchKey then, throw aura exception with a message
+         if(contact.size() == 0){
+            throw new AuraHandledException('No Record Found...'); 
+         }
+         
+        return contact;
+    }
+
     @AuraEnabled(cacheable=true)
     public static List<Contact> getContactListCulvers() {
         return [
             SELECT Id, FirstName, LastName, Phone, Email, AccountId, Account.Name FROM Contact WHERE Account.Name LIKE : 'Culvers - Newville'
         ];
     }
-
-
-
 
     @AuraEnabled(cacheable=true)
     public static List<Contact> editContact(String searchKey) {

@@ -13,8 +13,8 @@ import ID_FIELD from '@salesforce/schema/Contact.Id';
 const COLS = [
     { label: 'First Name', fieldName: 'FirstName', editable: true },
     { label: 'Last Name', fieldName: 'LastName', editable: true },
-    { label: 'Phone', fieldName: 'Phone', type: 'phone' },
-    { label: 'Email', fieldName: 'Email', type: 'email' }
+    { label: 'Phone', fieldName: 'Phone', type: 'phone', editable: true },
+    { label: 'Email', fieldName: 'Email', type: 'email', editable: true }
 ];
 export default class DataTableCulvers extends LightningElement {
 

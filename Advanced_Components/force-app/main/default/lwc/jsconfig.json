@@ -18,8 +18,14 @@
             "c/clickerParent": [
                 "clickerParent/clickerParent.js"
             ],
+            "c/createRecord": [
+                "createRecord/createRecord.js"
+            ],
             "c/dataTable": [
                 "dataTable/dataTable.js"
+            ],
+            "c/dataTableCulvers": [
+                "dataTableCulvers/dataTableCulvers.js"
             ],
             "c/displayPhone": [
                 "displayPhone/displayPhone.js"
@@ -42,17 +48,17 @@
             "c/phoneNumber2": [
                 "phoneNumber2/phoneNumber2.js"
             ],
+            "c/searchContact": [
+                "searchContact/searchContact.js"
+            ],
             "c/showRecord": [
                 "showRecord/showRecord.js"
             ],
             "c/slider": [
                 "slider/slider.js"
             ],
-            "c/dataTableCulvers": [
-                "dataTableCulvers/dataTableCulvers.js"
-            ],
-            "c/createRecord": [
-                "createRecord/createRecord.js"
+            "c/deleteCulverContact": [
+                "deleteCulverContact/deleteCulverContact.js"
             ]
         }
     },
