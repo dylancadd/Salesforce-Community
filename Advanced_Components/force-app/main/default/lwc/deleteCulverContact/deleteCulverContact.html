@@ -17,7 +17,7 @@
                    <div class="slds-truncate" title="Email">Email</div>
                 </th>
                 <th class="" scope="col">
-                    <div class="slds-truncate" title="Delete">Delete</div>
+                    <div class="slds-truncate"></div>
                  </th>
              </tr>
           </thead>
@@ -44,7 +44,7 @@
                    </td>
                    <td>
                     <div class="slds-truncate">
-                        <lightning-button variant="destructive" label={contact.Email} value={contact.Email} title="Destructive action" onclick={message} class="slds-m-left_xxx-small"></lightning-button>
+                        <lightning-button variant="destructive" label="Delete" value={contact.Id} title="Delete" onclick={handleClick} class="slds-m-left_xxx-small"></lightning-button>
                     </div>
                  </td>
                 </tr>

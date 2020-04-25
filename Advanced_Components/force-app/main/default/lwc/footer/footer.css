@@ -1,0 +1,12 @@
+.slds-footer {
+    background-color: rgb(38, 38, 39);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: relative;
+}
+
+.slds-align_absolute-center {
+    height: 3rem;
+    color: white;
+}

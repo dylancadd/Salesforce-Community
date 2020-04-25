@@ -21,9 +21,15 @@ export default class DataTableCulvers extends LightningElement {
     @track error;
     @track columns = COLS;
     @track draftValues = [];
+    @track contact;
 
     @wire(getContactListCulvers)
     contact;
+
+    connectedCallback() {
+        refreshApex(this.contact);
+    }
+
 
     handleSave(event) {
 
@@ -54,7 +60,7 @@ export default class DataTableCulvers extends LightningElement {
         }).catch(error => {
             this.dispatchEvent(
                 new ShowToastEvent({
-                    title: 'Error creating record',
+                    title: 'Error editing record',
                     message: error.body.message,
                     variant: 'error'
                 })

@@ -15,23 +15,19 @@ export default class SearchContact extends LightningElement {
     handleSearch() {
         // if search input value is not blank then call apex method, else display error msg 
         if (this.sVal !== '') {
-            searchCulverContact({
-                    searchKey: this.sVal
-                })
-                .then(result => {
-                    // set @track contacts variable with return contact list from server  
-                    this.contacts = result;
-                })
-                .catch(error => {
-                    // display server exception in toast msg 
-                    const event = new ShowToastEvent({
-                        title: 'Error',
-                        variant: 'error',
-                        message: error.body.message,
-                    });
-                    this.dispatchEvent(event);
-                    // reset contacts var with null   
-                    this.contacts = null;
+            searchCulverContact({searchKey: this.sVal}).then(result => {
+                // set @track contacts variable with return contact list from server  
+                this.contacts = result;
+            }).catch(error => {
+                // display server exception in toast msg 
+                const event = new ShowToastEvent({
+                    title: 'Error',
+                    variant: 'error',
+                    message: error.body.message,
+                });
+                this.dispatchEvent(event);
+                // reset contacts var with null   
+                this.contacts = null;
                 });
         } else {
             // fire toast event if input field is blank

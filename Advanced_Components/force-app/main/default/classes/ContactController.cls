@@ -1,25 +1,11 @@
-public with sharing class ContactController { 
+public without sharing class ContactController { 
 
 
     @AuraEnabled
     public static void deleteCulverContact(string searchKey) {
-        List<Contact> contact = [SELECT Id FROM Contact WHERE Email LIKE : searchKey];
 
-        delete contact;
+        delete new Contact(Id=searchKey);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -31,11 +17,9 @@ public with sharing class ContactController {
         List<Contact> contact = new List<Contact>();
      
 	   // query contact records
-        for(Contact current : [Select id, Name, FirstName, LastName, Phone, Email
+        for(Contact current : [Select id, Name, FirstName, LastName, Phone, Email, Account.Name
                             From Contact
-                            WHERE (lastName LIKE : key)
-                            OR (firstName LIKE : key)
-                            OR (name LIKE : key)
+                            WHERE (Account.Name = : 'Culvers - Newville') AND (name LIKE : key)
                             ORDER BY Name]){
            contact.add(current);
         }
@@ -48,10 +32,23 @@ public with sharing class ContactController {
         return contact;
     }
 
+
+    @AuraEnabled
+    public static List<Contact> getContactListCulversForDelete() {
+        return [
+            SELECT Id, Name, FirstName, LastName, Phone, Email, AccountId, Account.Name FROM Contact WHERE Account.Name LIKE : 'Culvers - Newville' ORDER BY Name
+        ];
+    }
+
+
+
+
+
+
     @AuraEnabled(cacheable=true)
     public static List<Contact> getContactListCulvers() {
         return [
-            SELECT Id, FirstName, LastName, Phone, Email, AccountId, Account.Name FROM Contact WHERE Account.Name LIKE : 'Culvers - Newville'
+            SELECT Id, Name, FirstName, LastName, Phone, Email, AccountId, Account.Name FROM Contact WHERE Account.Name LIKE : 'Culvers - Newville' ORDER BY Name
         ];
     }
 

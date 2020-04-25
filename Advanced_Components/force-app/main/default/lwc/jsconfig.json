@@ -27,6 +27,9 @@
             "c/dataTableCulvers": [
                 "dataTableCulvers/dataTableCulvers.js"
             ],
+            "c/deleteCulverContact": [
+                "deleteCulverContact/deleteCulverContact.js"
+            ],
             "c/displayPhone": [
                 "displayPhone/displayPhone.js"
             ],
@@ -35,6 +38,9 @@
             ],
             "c/fileUpload": [
                 "fileUpload/fileUpload.js"
+            ],
+            "c/footer": [
+                "footer/footer.js"
             ],
             "c/helloWorld": [
                 "helloWorld/helloWorld.js"
@@ -56,9 +62,6 @@
             ],
             "c/slider": [
                 "slider/slider.js"
-            ],
-            "c/deleteCulverContact": [
-                "deleteCulverContact/deleteCulverContact.js"
             ]
         }
     },

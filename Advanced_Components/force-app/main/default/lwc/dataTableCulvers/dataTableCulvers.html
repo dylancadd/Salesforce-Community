@@ -1,6 +1,5 @@
 <template>
     <lightning-card title="Culver's Employees" icon-name="standard:people">
-
         <div class="slds-m-around_medium">
             <template if:true={contact.data}>
                 <lightning-datatable
@@ -13,6 +12,9 @@
             </template>
             <template if:true={contact.error}>
                 <!-- handle Apex error -->
+                <div class="slds-m-around_medium">
+                    <h2>No Records Found</h2>
+                </div>
             </template>
         </div>
     </lightning-card>
