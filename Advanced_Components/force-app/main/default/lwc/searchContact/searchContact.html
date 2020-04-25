@@ -1,17 +1,14 @@
 <template>
    <div class="slds-m-around_medium">
-     
-	 <div class="slds-m-bottom_small">
-         <lightning-input type="text"
+      <div class="slds-m-bottom_small">
+         <lightning-input 
+            type="search"
             value={sVal}
             label="Contact Name"
             onchange={updateSeachKey}
-            ></lightning-input>
+            onkeyup={handleSearch}>
+         </lightning-input>
       </div><br>
-	  
-      <lightning-button label="Search"
-         onclick={handleSearch}
-         variant="brand"></lightning-button><br><br>
 		 
       <!-- custom data table(with SLDS style) to display contact list  -->  
       <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-m-top_small">
