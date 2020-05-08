@@ -2,13 +2,13 @@ import { LightningElement, api } from 'lwc';
 
 export default class SsnChild extends LightningElement {
     @api contact;
+    @api index;
 
     handleClick(event) {
 
         console.log('click')
-        console.log(this.template.querySelector('[data-mask="' + event.target.value + '"]'));
 
-        var node = this.template.querySelector('[data-mask="' + event.target.contact.value + '"]');
+        var node = this.template.querySelector('[data-mask="' + event.target.value + '"]');
 
         // console.log(this.template.querySelector('[data-mask="' + event.target.contact.value + '"]'));
 

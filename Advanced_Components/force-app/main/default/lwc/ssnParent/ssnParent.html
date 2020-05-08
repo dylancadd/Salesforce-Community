@@ -27,7 +27,8 @@
                 <template for:each={contacts.data} for:item="contact" for:index="index">
                     <c-ssn-child 
                         key={contact.Id}
-                        contact={contact}>
+                        contact={contact}
+                        index={index}>
                     </c-ssn-child>
                 </template>
             </tbody>
