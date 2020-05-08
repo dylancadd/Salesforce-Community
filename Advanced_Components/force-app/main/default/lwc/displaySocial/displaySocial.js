@@ -4,20 +4,12 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class DisplaySocial extends LightningElement {
     @track contacts;
-    @track ssn = 'xxx-xx-xxx';
-
-    @track clickedButtonLabel = 'Show';  
-    @track boolVisible = false; 
 
     handleClick(event) {
 
+        console.log('click')
 
-        // this.template.querySelector('lightning-formatted-text').classList.remove('masked');
-
-        console.log(event.target.value);
-
-
-        var node = this.template.querySelector('[title="' + event.target.value + '"]');
+        var node = this.template.querySelector('[data-mask="' + event.target.value + '"]');
 
         if(node.classList.contains("masked")) {
             node.classList.remove('masked');
@@ -25,8 +17,6 @@ export default class DisplaySocial extends LightningElement {
             node.classList.add('masked');
         }
 
-
-        
     }
 
     // call apex method on button click 
