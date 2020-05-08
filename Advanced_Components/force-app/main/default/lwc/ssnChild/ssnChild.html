@@ -1,0 +1,28 @@
+<template>
+    <tr class="slds-hint-parent" key={contact.Id}>
+        <td>
+            <div class="slds-truncate">{contact.FirstName}</div>
+        </td>
+        <td>
+            <div class="slds-truncate">{contact.LastName}</div>
+        </td>
+        <td>
+            <div class="slds-truncate">
+                <lightning-formatted-phone value={contact.Phone} ></lightning-formatted-phone>
+            </div>
+        </td>
+        <td>
+            <div class="slds-truncate">
+                <lightning-formatted-email value={contact.Email} ></lightning-formatted-email>
+            </div>
+        </td>
+        <td>
+            <div class="slds-truncate slds-form-element__control slds-text-has-icon slds-text-has-icon_right">
+                <lightning-formatted-text data-mask={index} value={contact.Social_Security_Number__c} class="masked" ></lightning-formatted-text>
+                <button class="slds-icon slds-text__icon slds-text__icon_right slds-icon-text-default  slds-button slds-button_icon" onclick={handleClick}>
+                    <lightning-button-icon data-icon={index} class="icon-icon" variant="bare" value={index} icon-name="utility:preview"></lightning-button-icon>
+                </button>
+            </div>
+        </td>
+    </tr>
+</template>

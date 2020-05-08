@@ -1,0 +1,36 @@
+<template>
+    <div class="slds-m-around_medium">
+        <!-- custom data table(with SLDS style) to display contact list  -->  
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-m-top_small">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="First Name">First Name</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Last Name">Last Name</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Phone">Phone</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Email">Email</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Social">Social Security Number</div>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!--iterate all contact records using for-each iteration -->    
+                <template for:each={contacts.data} for:item="contact" for:index="index">
+                    <c-ssn-child 
+                        key={contact.Id}
+                        contact={contact}>
+                    </c-ssn-child>
+                </template>
+            </tbody>
+        </table>
+    </div>
+</template>

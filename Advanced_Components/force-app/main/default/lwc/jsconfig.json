@@ -65,6 +65,12 @@
             ],
             "c/displaySocial": [
                 "displaySocial/displaySocial.js"
+            ],
+            "c/ssnParent": [
+                "ssnParent/ssnParent.js"
+            ],
+            "c/ssnChild": [
+                "ssnChild/ssnChild.js"
             ]
         }
     },

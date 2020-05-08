@@ -48,7 +48,7 @@ public without sharing class ContactController {
     @AuraEnabled(cacheable=true)
     public static List<Contact> getContactListCulvers() {
         return [
-            SELECT Id, Name, FirstName, LastName, Phone, Email, AccountId, Account.Name FROM Contact WHERE Account.Name LIKE : 'Culvers - Newville' ORDER BY Name
+            SELECT Id, Name, FirstName, LastName, Phone, Email, Social_Security_Number__c, AccountId, Account.Name FROM Contact WHERE Account.Name LIKE : 'Culvers - Newville' ORDER BY Name
         ];
     }
 
