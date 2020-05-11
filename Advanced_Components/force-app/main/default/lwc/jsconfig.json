@@ -71,6 +71,9 @@
             ],
             "c/ssnChild": [
                 "ssnChild/ssnChild.js"
+            ],
+            "c/helloName": [
+                "helloName/helloName.js"
             ]
         }
     },

@@ -2,12 +2,28 @@ public without sharing class ContactController {
 
 
     @AuraEnabled
+    public static id showName(){
+        id userId = UserInfo.getUserId();
+        User u = [select id, contactId from User where id = : userId];
+        id getContactId = u.contactId;
+        system.debug('getContactId' + getContactId);
+
+
+
+        return getContactId;
+    }
+
+
+
+
+
+
+
+    @AuraEnabled
     public static void deleteCulverContact(string searchKey) {
 
         delete new Contact(Id=searchKey);
     }
-
-
 
     @AuraEnabled(cacheable=true)
     public static List<Contact> searchCulverContact(string searchKey) {
@@ -39,11 +55,6 @@ public without sharing class ContactController {
             SELECT Id, Name, FirstName, LastName, Phone, Email, Social_Security_Number__c, AccountId, Account.Name FROM Contact WHERE Account.Name LIKE : 'Culvers - Newville' ORDER BY Name
         ];
     }
-
-
-
-
-
 
     @AuraEnabled(cacheable=true)
     public static List<Contact> getContactListCulvers() {
