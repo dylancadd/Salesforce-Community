@@ -1,7 +1,7 @@
 <template>
-    <lightning-card>
+    <lightning-card title="Culver's Employees" icon-name="standard:people">
         <div class="slds-m-around_medium">
-            <lightning-record-edit-form object-api-name="Contact" onsuccess={showToast}>
+            <lightning-record-edit-form object-api-name="Contact" onsuccess={handleSuccess}>
                 <lightning-messages>
                 </lightning-messages>
                 <lightning-input-field class="firstName" field-name="FirstName" required></lightning-input-field>

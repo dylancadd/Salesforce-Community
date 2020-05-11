@@ -1,14 +1,9 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class CreateRecord extends LightningElement {
-    @track accountId;
 
     handleSuccess(event) {
-        this.accountId = event.detail.id;
-    }
-
-    showToast() {
         const firstName = this.template.querySelector(".firstName")
         const lastName = this.template.querySelector(".lastName")
         const title = this.template.querySelector(".title")
@@ -21,13 +16,14 @@ export default class CreateRecord extends LightningElement {
         email.value = "";
         mobilePhone.value = "";
 
-        const event = new ShowToastEvent({
+        const toast = new ShowToastEvent({
             title: 'Successful!',
             message: 'A new contact has been created.',
             variant: 'success'
         });
-        this.dispatchEvent(event);
+        this.dispatchEvent(toast);
     }
+
 
     
 }

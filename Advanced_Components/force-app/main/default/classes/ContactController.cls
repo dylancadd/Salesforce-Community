@@ -1,6 +1,5 @@
 public without sharing class ContactController { 
 
-
     @AuraEnabled
     public static id showName(){
         id userId = UserInfo.getUserId();
@@ -13,18 +12,13 @@ public without sharing class ContactController {
         return getContactId;
     }
 
-
-
-
-
-
-
     @AuraEnabled
     public static void deleteCulverContact(string searchKey) {
 
         delete new Contact(Id=searchKey);
     }
 
+    // Method for the searchContact component
     @AuraEnabled(cacheable=true)
     public static List<Contact> searchCulverContact(string searchKey) {
         string key = '%' + searchKey + '%';
@@ -48,7 +42,7 @@ public without sharing class ContactController {
         return contact;
     }
 
-
+    // Method for the deleteCulverContact component
     @AuraEnabled
     public static List<Contact> getContactListCulversForDelete() {
         return [
@@ -56,6 +50,7 @@ public without sharing class ContactController {
         ];
     }
 
+    // Method for the dataTableCulvers component
     @AuraEnabled(cacheable=true)
     public static List<Contact> getContactListCulvers() {
         return [
