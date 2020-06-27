@@ -1,5 +1,10 @@
 public without sharing class ContactController { 
 
+    @AuraEnabled(cacheable=true)
+    public static List<User> userGrab(String searchKey) {
+        return [SELECT Name, Contact.LastName FROM User WHERE Id = :searchKey];
+    }
+
     @AuraEnabled
     public static id showName(){
         id userId = UserInfo.getUserId();

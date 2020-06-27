@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Customer Feedback Form">
+        <div class="slds-m-around_medium">
+            <div class="slds-form">
+                <lightning-input value={transactionNumber} class="slds-size_1-of-4 same-line" type="text" name="transactionNumber" label="Transaction Number" required></lightning-input>
+
+                <lightning-input value={date} class="slds-size_1-of-4 same-line" type="date" name="dateOrdered" label="Date of Order" required></lightning-input>
+
+                <br>
+
+                <lightning-input value={name} class="slds-size_1-of-4 same-line" type="input" name="customerName" label="Name" required></lightning-input>
+
+                <lightning-input value={email} class="slds-size_1-of-4 same-line" type="email" name="customerEmail" label="Email" required></lightning-input>
+
+                <lightning-input value={description} type="text" label="Description" required></lightning-input>
+
+                <div class="slds-m-top_medium">
+                    <lightning-button type="submit" variant="brand" label="Submit" onclick={handleClick}></lightning-button>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+    
+</template>

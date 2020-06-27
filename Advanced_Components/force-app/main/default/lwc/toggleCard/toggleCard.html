@@ -1,0 +1,73 @@
+<template>
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                  Toggle Between Card View and List View
+              </h2>
+            </div>
+            <div class="slds-no-flex">
+              <button class="slds-button slds-button_neutral" onclick={handleView}>Change View</button>
+            </div>
+          </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+
+            <template if:true={showCard}>
+                You are in Card View
+            </template>
+
+            <template if:false={showCard}>
+                <div class="">
+                    <!-- custom data table(with SLDS style) to display contact list  -->  
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-m-top_small">
+                       <thead>
+                          <tr class="slds-line-height_reset">
+                             <th class="" scope="col">
+                                <div class="slds-truncate" title="First Name">First Name</div>
+                             </th>
+                             <th class="" scope="col">
+                                <div class="slds-truncate" title="Last Name">Last Name</div>
+                             </th>
+                             <th class="" scope="col">
+                                <div class="slds-truncate" title="Phone">Phone</div>
+                             </th>
+                             <th class="" scope="col">
+                                <div class="slds-truncate" title="Email">Email</div>
+                             </th>
+                          </tr>
+                       </thead>
+                       
+                       <tbody>
+                          <!--iterate all contact records using for-each iteration -->    
+                          <template for:each={contacts} for:item="contact">
+                             <tr class="slds-hint-parent" key={contact.Id}>
+                                <td>
+                                   <div class="slds-truncate">{contact.FirstName}</div>
+                                </td>
+                                <td>
+                                   <div class="slds-truncate">{contact.LastName}</div>
+                                </td>
+                                <td>
+                                   <div class="slds-truncate">
+                                      <lightning-formatted-phone value={contact.Phone} ></lightning-formatted-phone>
+                                   </div>
+                                </td>
+                                <td>
+                                   <div class="slds-truncate">
+                                      <lightning-formatted-email value={contact.Email} hide-icon></lightning-formatted-email>
+                                   </div>
+                                </td>
+                             </tr>
+                          </template>
+                       </tbody>
+                    </table>
+                 </div>
+            </template>
+
+        </div>
+
+      </article>
+    
+</template>

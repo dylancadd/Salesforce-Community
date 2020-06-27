@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>48.0</apiVersion>
+    <masterLabel>Toggle Card/List View</masterLabel>
+    <description>Changes layout from card view to list view and vice versa.</description>
     <isExposed>true</isExposed>
     <targets>
         <target>lightning__AppPage</target>

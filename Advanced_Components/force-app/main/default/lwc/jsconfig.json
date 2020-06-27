@@ -39,9 +39,6 @@
             "c/fileUpload": [
                 "fileUpload/fileUpload.js"
             ],
-            "c/footer": [
-                "footer/footer.js"
-            ],
             "c/helloWorld": [
                 "helloWorld/helloWorld.js"
             ],
@@ -74,6 +71,12 @@
             ],
             "c/helloName": [
                 "helloName/helloName.js"
+            ],
+            "c/toggleCard": [
+                "toggleCard/toggleCard.js"
+            ],
+            "c/customerFeedback": [
+                "customerFeedback/customerFeedback.js"
             ]
         }
     },
